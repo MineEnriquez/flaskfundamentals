@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="centeredtext">Welcome!</h1>
+    <div style="width: 1000px">
+        {% for x in range(0,times): %}
+        <canvas id="myCanvas" width="200" height="200" style= "border:5px solid #000000; background: {{color}}"></canvas>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>HTML Table</title>
+</head>
+
+<body>
+        <h1>Index Page</h1>
+        <h3>Create a User</h3>
+            <!-- IMPORTANT PROPERTIES HERE:   Action and Method -->
+            <!-- THIS SHOULD HAVE A CORRESPONDING  @app.route in our SERVER file -->
+            <form action='/users' method='post'>
+                Name: <input type='text' name='name'>
+                Email: <input type='text' name='email'>
+            <input type='submit' value='create user'>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.centered {
+    margin: 10px auto;
+}
+
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.box {
+    width: 50px;
+    height: 50 px;
+    background: lightblue;
+    border: 3px solid black;
+    padding: 50px;
+    margin: 10px;
+  }
+
+  .sidebyside{
+    display: inline-block;
+  }
+
+  .centeredtext{
+      text-align: center;
+  }

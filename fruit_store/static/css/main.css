@@ -1,0 +1,111 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: black;
+}
+
+.wrapper {
+    background: white;
+    font-size: medium;
+    width: 900px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    margin: auto;
+}
+
+.sidebyside {
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+}
+
+    .container .width60 {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .container .width40 {
+        width: 30%;
+        padding: 20px;
+        border: solid 1px black;
+        background: #b4a7d6;
+        vertical-align: text-top;
+    }
+
+    .container .sidebar_empty {
+        width: 30%;
+        padding: 20px;
+    }
+
+.underlinedtext {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    float: right;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: #b6d7a8;
+    box-shadow: 20px;
+}
+
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #products td, #products th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #products tr:nth-child(even) {
+        background-color: #faf8f8;
+    }
+
+    #products tr:hover {
+        background-color: #ddd;
+    }
+
+    #products th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(97, 99, 97);
+        color: white;
+    }
+
+    #products select {
+        width: 50px;
+        height: 29px;
+    }
+
+.table-borderless {
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 20px auto;
+    padding: 8px;
+}
+
+    .table-borderless input {
+        border: none;
+        width: 249px;
+        height: 29px;
+    }
+
+    .table-borderless .formvalue {
+        border-collapse: collapse;
+        border: 1px solid lightgray;
+        width: 249px;
+        height: 29px;
+    }

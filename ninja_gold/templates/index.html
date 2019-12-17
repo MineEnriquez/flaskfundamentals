@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Ninja Gold</title>
+    <style>
+        body{
+            background: gray;
+        }
+        .wrapper {
+            width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: whitesmoke;
+        }
+
+        .box {
+            width: 210px;
+            height: 210px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        input {
+            margin: 10px auto;
+        }
+        .sidebyside {
+            display: inline-block;
+        }
+
+        .activities
+        {
+            min-width: 90%;
+            height: 200px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <table>
+                <td>Your Gold: </td>
+                <td style = "width: 200px; text-align: center;" class="border border-dark">{{session['total_gold']}}</td>
+            </table>
+        </div>
+        <div>
+            <div class="box sidebyside border border-dark">
+                <h1> Farm</h1>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="min" value=10><br>
+                    <input type="hidden" name="max" value=20><br>
+                    (earns 10 -20 golds)<br>
+                    <input type="submit" value="Find Gold">
+                </form>
+            </div>
+            <div class="box sidebyside border border-dark">
+                <h1> Cave </h1>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="min" value=5><br>
+                    <input type="hidden" name="max" value=10><br>
+                    (earns 5 -10 golds)<br>
+                    <input type="submit" value="Find Gold">
+                </form>
+            </div>
+            <div class="box sidebyside border border-dark">
+                <h1> House</h1>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="min" value=5><br>
+                    <input type="hidden" name="max" value=10><br>
+                    (earns 2 - 5 golds)
+                    <br>
+                    <input type="submit" value="Find Gold">
+                </form>
+            </div>
+            <div class="box sidebyside border border-dark">
+                <h1> Casino</h1>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="min" value=-50><br>
+                    <input type="hidden" name="max" value=50><br>
+                    (earns/takes 0 - 50 golds)<br>
+                    <input type="submit" value="Find Gold">
+                </form>
+            </div>
+            <div>
+                Activities:<br>
+                <div class="activities border border-dark">
+                    <ul>
+                    {{message|safe}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form action="/reset">
+                <input type="submit" value="Reset">
+            </form>
+        </div>
+    </div>  
+</body>
+
+</html>

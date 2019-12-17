@@ -1,0 +1,46 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: black;
+}
+
+tr {
+    height: 50px;
+    border: none;
+    line-height: 25px;
+}
+td{
+    width: 260px;
+}
+
+.multiline {
+    width: 600px;
+    height: 80px;
+}
+.singlevalue {
+    width: 300px;
+}
+
+.underlinedtext{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    float: right;
+}
+
+.wrapper {
+    background: whitesmoke;
+    font-size: medium;
+	width: 600px;
+	height: 600px;
+	border: 1px solid black;	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	padding: 25px;
+	margin: auto;
+}

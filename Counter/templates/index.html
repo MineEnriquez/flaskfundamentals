@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Counter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .wrapper {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        form {
+            display: inline-block;
+            width: auto;
+            margin: 0 auto;
+        }
+        .centered {
+            margin: 10px auto;
+            padding: 0px 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 style="text-align: center; vertical-align:central">Visits:</h1>
+        <h1 style="text-align: center; vertical-align:central">{{session['totalvisits']}}</h1>
+        <div class="centered">
+        <form action='/add' method='post' class="sidebyside">
+                <input type="text" style ="width: 50px" name="increment" value="1">
+                <input type="submit" value="Add more visits" class="btn btn-danger " />
+            </form>
+            <form action="/reset" method="post" class="sidebyside">
+                <input type="submit" value="reset" class="bottomright btn btn-success" />
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

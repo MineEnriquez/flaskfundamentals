@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Dojo Fruit Store Checkout</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3>Thank you for your order!</h3>
+        <p>We ordered <i><b>{{total_items}}</b></i> items for you and charged your</p>
+        <p>student account on <i>{{transaction_time}}</i> </p>
+
+
+        <table class="container">
+            <tr>
+                <td class="width60">
+                    <table id="products" class="table table-bordered table-striped table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Fruit Name</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Strawberries:
+                                </td>
+                                <td>
+                                    {{strawberry_qty}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Raspberries:
+                                </td>
+                                <td>
+                                    {{raspberry_qty}}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Apples
+                                </td>
+                                <td>
+                                    {{apple_qty}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="underlinedtext"> Your information</h4>
+                    <table class="table-borderless">
+                        <tr>
+                            <td>Name: </td>
+                            <td>{{name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Your student ID: </td>
+                            <td>{{studentid}}</td>
+                        </tr>
+
+                    </table>
+                    <form action="/">
+
+                        <input type="submit" value="Go back" class="btn">
+                    </form>
+                </td>
+                <td class="sidebar_empty">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Dojo Survey</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Dojo Survey:</h1>
+        <!-- IMPORTANT PROPERTIES HERE:   Action and Method -->
+        <!-- THIS SHOULD HAVE A CORRESPONDING  @app.route in our SERVER file -->
+        <table>
+            <form action='/result' method='post'>
+                <tr>
+                    <td> Your Name: </td>
+                    <td><input type='text' name='name' class="singlevalue"></td>
+                </tr>
+                <tr>
+                    <td> Dojo Location: </td>
+                    <td>
+                        <select name="dojo_location" class="singlevalue">
+                            <option value="Seattle">Seattle</option>
+                            <option value="Sunnyvale">Sunnyvale</option>
+                            <option value="New York">New York</option>
+                            <option value="Audi">Audi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Favorite stack:
+                    </td>
+                    <td>
+                        <input type="checkbox" name="stack" value="MEAN Track"> MEAN Track <br>
+                        <input type="checkbox" name="stack" value="C# / .Net Track"> C# / .Net Track<br>
+                        <input type="checkbox" name="stack" value="Rails Track"> Ruby on Rails Track<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Favorite Language: </td>
+                    <td>
+                        <select name="favorite_language" class="singlevalue">
+                            <option value="Python">Python</option>
+                            <option value="C#">c#</option>
+                            <option value="JavaScript">JavaScript</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Program:
+                    </td>
+                    <td>
+                        <input type="radio" name="program" checked value="Onsite Bootcamp">Onsite Bootcamp<br>
+                        <input type="radio" name="program" value="Online Full-time Bootcamp">Online Full-time Bootcamp
+                        <br>
+                        <input type="radio" name="program" value="Online Part-time Bootcamp">Online Part-time Bootcamp
+                    </td>
+                </tr>
+        </table>
+        <p>COMMENTS (Optional):
+            <br>
+            <textarea name="comments" cols="200" rows="6" class="multiline"></textarea>
+        </p>
+        <input type='submit' value='submit' class="btn">
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/checkerboard.css') }}">
+    <title>Checkers</title>
+</head>
+
+<body>
+    {% for x in range(0,rows): %}
+    <div >
+        {% for y in range(0,cols): %}
+            {% if x % 2 == 0: %}
+                {% if y % 2 == 0: %}
+                    <canvas width={{squaresize}} height={{squaresize}} style="background: {{color2}}"></canvas>
+                {% else: %}
+                    <canvas width={{squaresize}} height={{squaresize}} style="background: {{color1}}"></canvas>
+                {% endif %}
+            {% else: %}
+                {% if y % 2 == 0: %}
+                    <canvas width={{squaresize}} height={{squaresize}} style="background: {{color1}}"></canvas>
+                {% else: %}
+                    <canvas width={{squaresize}} height={{squaresize}} style="background: {{color2}}"></canvas>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</body>
+
+</html>
